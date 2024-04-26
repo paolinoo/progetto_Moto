@@ -85,7 +85,5 @@ public class Pilota {
         return "Pilota{" + "nome=" + nome + ", cognome=" + cognome + ", dataNascita=" + dataNascita + ", altezza=" + altezza + ", nazione=" + nazione + '}';
     }
     
-    
-    
     }
 
