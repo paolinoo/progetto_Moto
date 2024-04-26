@@ -4,6 +4,8 @@
  */
 package com.mycompany.progetto_moto;
 
+import java.time.LocalDate;
+
 /**
  *
  * @author Studente
@@ -12,16 +14,17 @@ public class Pilota {
     
     private String nome;
     private String cognome;
-    private int eta;
+    private LocalDate dataNascita;
     private int altezza;
     private String nazione;
+    private int idPilota;
 
     public Pilota(String nome, String cognome, int eta, int altezza, String nazione) {
         this.nome = nome;
         this.cognome = cognome;
-        this.eta = eta;
         this.altezza = altezza;
         this.nazione = nazione;
+        this.idPilota=idPilota;
     }
     
     public Pilota(Pilota pilota)
@@ -29,9 +32,12 @@ public class Pilota {
         this.nome=pilota.getNome();
         this.cognome=pilota.getCognome();
         this.altezza=pilota.getAltezza();
-        this.eta=pilota.getEta();
         this.nazione=pilota.getNazione();
-                
+    }
+    
+    public int getIDPilota()
+    {
+        return idPilota;
     }
 
     public String getNome() {
@@ -50,12 +56,12 @@ public class Pilota {
         this.cognome = cognome;
     }
 
-    public int getEta() {
-        return eta;
+    public LocalDate getDataNascita() {
+        return dataNascita;
     }
 
-    public void setEta(int eta) {
-        this.eta = eta;
+    public void setDataNascita(LocalDate dataNascita) {
+        this.dataNascita = dataNascita;
     }
 
     public int getAltezza() {
@@ -76,8 +82,10 @@ public class Pilota {
 
     @Override
     public String toString() {
-        return "Pilota{" + "nome=" + nome + ", cognome=" + cognome + ", eta=" + eta + ", altezza=" + altezza + ", nazione=" + nazione + '}';
+        return "Pilota{" + "nome=" + nome + ", cognome=" + cognome + ", dataNascita=" + dataNascita + ", altezza=" + altezza + ", nazione=" + nazione + '}';
     }
     
     
-}
+    
+    }
+
