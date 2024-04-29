@@ -16,15 +16,16 @@ public class Pilota {
     private String cognome;
     private LocalDate dataNascita;
     private int altezza;
-    private String nazione;
     private int idPilota;
+    private static int nextId=1;
 
-    public Pilota(String nome, String cognome, int eta, int altezza, String nazione) {
-        this.nome = nome;
-        this.cognome = cognome;
-        this.altezza = altezza;
-        this.nazione = nazione;
-        this.idPilota=idPilota;
+    public Pilota(String nome, String cognome, int eta, int altezza,LocalDate dataNascita,int IdPilota) {
+        idPilota=nextId;
+        setNome(nome);
+        setCognome(cognome);
+        setAltezza(altezza);
+        setDataNascita(dataNascita);
+        nextId++;
     }
     
     public Pilota(Pilota pilota)
@@ -32,10 +33,10 @@ public class Pilota {
         this.nome=pilota.getNome();
         this.cognome=pilota.getCognome();
         this.altezza=pilota.getAltezza();
-        this.nazione=pilota.getNazione();
+        this.dataNascita=pilota.getDataNascita();
     }
     
-    public int getIDPilota()
+    public int getID()
     {
         return idPilota;
     }
@@ -72,17 +73,9 @@ public class Pilota {
         this.altezza = altezza;
     }
 
-    public String getNazione() {
-        return nazione;
-    }
-
-    public void setNazione(String nazione) {
-        this.nazione = nazione;
-    }
-
     @Override
     public String toString() {
-        return "Pilota{" + "nome=" + nome + ", cognome=" + cognome + ", dataNascita=" + dataNascita + ", altezza=" + altezza + ", nazione=" + nazione + '}';
+        return "Pilota{" + "nome=" + nome + ", cognome=" + cognome + ", dataNascita=" + dataNascita + ", altezza=" + altezza + '}';
     }
     
     }
