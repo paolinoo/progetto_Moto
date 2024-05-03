@@ -35,7 +35,7 @@ public class Menu
 	for(int i=0;i<numeroVoci;i++)
 	    System.out.println(elencoVoci[i]);
     }
-   
+ 
     public int sceltaMenu()
     {
 	String inputUtente;
