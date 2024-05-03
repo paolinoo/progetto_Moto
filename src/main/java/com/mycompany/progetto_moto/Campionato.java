@@ -34,10 +34,10 @@ public class Campionato {
         return N_MAX_SCUDERIE;
     }
 
-    public void setPilota(String nomeScuderia) {
+    public void setPilota(String nomeScuderia, Pilota pilota) {
         for (int i = 0; i < nScuderiePresenti; i++) {
             if (scuderie[i].getNomeScuderia().equals(nomeScuderia)) {
-                scuderie[i].aggiungiPilota(idPilota);
+                scuderie[i].aggiungiPilota(pilota);
                 return;
             }
         }

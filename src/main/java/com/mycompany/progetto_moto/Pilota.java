@@ -19,7 +19,7 @@ public class Pilota {
     private int idPilota;
     private static int nextId=1;
 
-    public Pilota(String nome, String cognome, int eta, int altezza,LocalDate dataNascita,int IdPilota) {
+    public Pilota(String nome, String cognome, int eta, int altezza,LocalDate dataNascita) {
         idPilota=nextId;
         setNome(nome);
         setCognome(cognome);
@@ -75,8 +75,10 @@ public class Pilota {
 
     @Override
     public String toString() {
-        return "Pilota{" + "nome=" + nome + ", cognome=" + cognome + ", dataNascita=" + dataNascita + ", altezza=" + altezza + '}';
+        return "Pilota{" + "nome=" + nome + ", cognome=" + cognome + ", dataNascita=" + dataNascita + ", altezza=" + altezza + ", idPilota=" + idPilota + '}';
     }
+
+    
     
     }
 

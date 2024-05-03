@@ -79,21 +79,7 @@ public class Scuderia {
         }
         System.out.println("Pilota non trovato.");
     }
-
-    public void visualizzaScuderia(String nome) {
-        if (nomeScuderia.equals(nome)) {
-            System.out.println("Scuderia: " + nomeScuderia);
-            System.out.println("ID Squadra: " + idSquadra);
-            System.out.println("Punti: " + punti);
-            System.out.println("Numero piloti: " + nPilotiPresenti);
-            for (int i = 0; i < nPilotiPresenti; i++) {
-                System.out.println("Pilota " + (i + 1) + ": " + piloti[i]);
-            }
-        } else {
-            System.out.println("Scuderia non trovata.");
-        }
-    }
-
+   
     public Pilota getPilota(int id) {
         for (int i = 0; i < nPilotiPresenti; i++) {
             if (piloti[i].getID()== id) {
@@ -103,14 +89,9 @@ public class Scuderia {
         return null;
     }
 
-    public void modificaPilota(int id) {
-        for (int i = 0; i < nPilotiPresenti; i++) {
-            if (piloti[i].getID() == id) {
-                // Implementa la logica per la modifica del pilota
-                return;
-            }
-        }
-        System.out.println("Pilota non trovato.");
+    
+    public Pilota[] visualizzaPiloti(){
+        return piloti;
     }
 
     @Override
