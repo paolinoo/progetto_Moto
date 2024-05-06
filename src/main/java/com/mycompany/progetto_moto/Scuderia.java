@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package com.mycompany.progetto_moto;
-
+import eccezioni.*;
 /**
  *
  * @author Studente
@@ -66,7 +66,7 @@ public class Scuderia {
         }
     }
 
-    public void rimuoviPilota(int id) {
+    public void rimuoviPilota(int id) throws EccezioneIDNonPresente {
         for (int i = 0; i < nPilotiPresenti; i++) {
             if (piloti[i].getID() == id) {
                 for (int j = i; j < nPilotiPresenti - 1; j++) {
@@ -75,6 +75,9 @@ public class Scuderia {
                 piloti[nPilotiPresenti - 1] = null;
                 nPilotiPresenti--;
                 return;
+            }
+            else{
+                throw new EccezioneIDNonPresente();
             }
         }
         System.out.println("Pilota non trovato.");

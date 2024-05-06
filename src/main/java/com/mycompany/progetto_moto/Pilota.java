@@ -77,8 +77,6 @@ public class Pilota {
     public String toString() {
         return "Pilota{" + "nome=" + nome + ", cognome=" + cognome + ", dataNascita=" + dataNascita + ", altezza=" + altezza + ", idPilota=" + idPilota + '}';
     }
-
-    
     
     }
 

@@ -8,6 +8,7 @@ package eccezioni;
  *
  * @author Studente
  */
-public class EccezioneIDNonPresente {
+public class EccezioneIDNonPresente extends Exception
+{
     
 }

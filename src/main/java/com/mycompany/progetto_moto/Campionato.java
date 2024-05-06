@@ -4,6 +4,9 @@
  */
 package com.mycompany.progetto_moto;
 
+import eccezioni.EccezioneIDNonPresente;
+import java.io.IOException;
+
 /**
  *
  * @author Studente
@@ -73,8 +76,15 @@ public class Campionato {
         System.out.println("Scuderia non trovata.");
         return null;
     }
+    
 
-    public void rimuoviPilota(int id) {
+    public Scuderia visualizzaScuderia(int idScuderia) {
+        Scuderia scuderia = getScuderia(idScuderia);
+        return scuderia;
+    }
+
+
+    public void rimuoviPilota(int id) throws EccezioneIDNonPresente {
         for (int i = 0; i < nScuderiePresenti; i++) {
             if (scuderie[i].getPilota(id) != null) {
                 scuderie[i].rimuoviPilota(id);
